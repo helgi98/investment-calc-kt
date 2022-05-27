@@ -1,0 +1,25 @@
+logging:
+  level:
+    .: DEBUG
+    org.springframework: ERROR
+
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+integration:
+  fmp:
+    api-url: https://financialmodelingprep.com/api/v3/
+    api-key: 4ddb416f0071018ac014440f8adcddd9
+
+---
+
+spring:
+  profiles: local
+
+server:
+  port: 8080
+  host: localhost
